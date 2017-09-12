@@ -1,0 +1,30 @@
+<div  style="border:1px solid grey;padding:10px;border-radius:5px;">
+  <p *ngIf="todo._id">
+    <span><strong>ID: </strong>{{ todo._id.$oid }}</span>
+  </p>
+  <p>
+    <strong>Title: </strong>
+    <input class="form form-cotrol"
+      [(ngModel)]="todo.title" />
+  </p>
+  <h3>
+    <button (click)="addItem()" class="btn btn-default" style="cursor:pointer;">+</button>
+    <span>ITEMS</span>
+  </h3>
+  <br>
+  <div *ngIf="todo.items">
+    <ul class="list-group">
+      <li *ngFor="let item of todo.items" class="list-group-item">
+        <button class="btn btn-danger" (click)="removeItem(item)">-</button>
+        <input 
+          [(ngModel)]="item.name" /> - 
+        <label style="cursor:pointer;">
+          <input type="checkbox" [(ngModel)]="item.done">
+          <span>Done</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br>
+  <button (click)="onUpdate(todo)" class="btn btn-success">Save</button>
+</div>
