@@ -12,6 +12,7 @@ import { TodosComponent } from './todo/todos.component';
 import { TodoService } from './todo/todo.service';
 import { CollapseModule } from 'ngx-bootstrap';
 import { AlertModule } from 'ngx-bootstrap';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { AlertModule } from 'ngx-bootstrap';
     TodoDetailComponent,
     TodosComponent
   ],
-  providers: [ TodoService ],
+  providers: [ TodoService, MessageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

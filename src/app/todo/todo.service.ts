@@ -7,7 +7,7 @@ import {Item} from './item';
 
 @Injectable()
 export class TodoService {
-    private TODO_API_URL = 'http://localhost:3000/todos/';
+    private TODO_API_URL = 'https://todos-api-sales.herokuapp.com/todos/';
 
     constructor(private http: Http) {}
 
