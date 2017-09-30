@@ -40,7 +40,7 @@ export class TodosComponent implements OnInit {
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/todo', this.selectedTodo._id.$oid]);
+    this.router.navigate(['/todo.detail', this.selectedTodo._id.$oid]);
   }
 
   removeTodo(todo: Todo): void {

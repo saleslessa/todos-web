@@ -20,7 +20,7 @@ export class TodoDetailComponent implements OnInit {
         this.route.params.subscribe((params: Params) => {
             const id = params['id'];
 
-            (id)
+            (id && id !== '' && id !== 'indefined')
                 ? this.todoService.getTodo(id).then(t => this.todo = t)
                 : this.todo = new Todo();
 

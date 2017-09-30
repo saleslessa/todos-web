@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'todo/:id', component: TodoDetailComponent },
   { path: 'todos',     component: TodosComponent },
-  { path: 'todo',     component: TodosComponent }
+  { path: 'todo',     component: TodoDetailComponent }
 ];
 
 @NgModule({
