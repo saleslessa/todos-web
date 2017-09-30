@@ -9,8 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod",
+    "deploy": "git add . && git commit -m 'test' && git push origin master && git push heroku master"
   },
+  
   "engines": {
     "node": "6.11.2",
     "npm": "3.10.10"
